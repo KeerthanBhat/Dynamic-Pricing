@@ -1,0 +1,18 @@
+{% extends "retail/base.html" %}
+
+{% block title %}
+    Login
+{% endblock %}
+
+{% block main %}
+
+<form id="login_form" method="post" action="/retail/login/">
+	{% csrf_token %}
+	Username: <input type="text" name="username" value="" size="30" />
+	<br /><br />
+	Password: <input type="password" name="password" value="" size="30" />
+	<br />
+	<br /> 
+	<input type="submit" value="Login" />
+</form>
+{% endblock %}

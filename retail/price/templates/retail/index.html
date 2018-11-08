@@ -1,0 +1,72 @@
+{% extends "retail/base.html" %}
+{% load staticfiles %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<style>
+
+	article {
+    	padding: 50px;
+    	overflow: hidden;
+	}
+	.abcd {
+		background-image: url("{% static "images/background-1.png" %}");
+	}
+	.button {
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: #186503;
+	  border: none;
+	  color: #FFFFFF;
+	  text-align: center;
+	  font-size: 28px;
+	  padding: 10px;
+	  width: 200px;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  margin: 5px;
+	}
+
+	.button span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	}
+
+	.button span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+	}
+
+	.button:hover span {
+	  padding-right: 25px;
+	}
+
+	.button:hover span:after {
+	  opacity: 1;
+	  right: 0;
+	}
+</style>
+
+<div>
+	<div class="abcd">
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	<p align="center">
+	<button class="button" style="vertical-align:middle"><a href="/retail/bill/" style="color: #FFFFFF;"><span>View Cart</span></a></button>
+	<button class="button" style="vertical-align:middle"><a href="/retail/inventory/" style="color: #FFFFFF;"><span>Inventory</span></a></button>
+	<button class="button" style="vertical-align:middle"><a href="/retail/history/" style="color: #FFFFFF;"><span>History</span></a></button>
+	</p>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+	</div>
+</div>
+
+{% endblock %}
