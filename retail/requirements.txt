@@ -16,7 +16,7 @@ idna==2.7
 ipaddress==1.0.22
 jmespath==0.9.3
 MySQL-python==1.2.5
-numpy==1.15.4
+numpy==1.22.0
 pandas==0.23.4
 paramiko==2.4.2
 pyasn1==0.4.4
